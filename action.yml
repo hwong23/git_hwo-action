@@ -1,14 +1,14 @@
 # action.yml
 name: 'Hello World'
-description: 'Greet someone and record the time'
+description: 'Archi CI'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  archi-args:  # id of input
+    description: 'Archi input argumentes'
     required: true
-    default: 'World'
+    default: ''
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'The time archi run'
 runs:
   using: 'docker'
   image: 'Dockerfile'
