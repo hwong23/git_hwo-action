@@ -8,4 +8,3 @@ pkill -f 'Xvfb :99'
 
 time=$(date)
 echo "time=$time" >> $GITHUB_OUTPUT
-
