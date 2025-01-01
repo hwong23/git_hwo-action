@@ -47,3 +47,4 @@ WORKDIR /data
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "archi", "--help" ]
+
