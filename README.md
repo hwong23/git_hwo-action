@@ -1,21 +1,35 @@
-# Hello world docker action
+# Docker Image para ejecución JArchi (archimate) en un contenedor
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+Esta imagen implementa el caso de uso de generación de contenidos desde un modelo mediante una cadena de CI/CD. Usa [Archi](https://www.archimatetool.com).
 
-## Inputs
+## Guía de Uso
 
-## `who-to-greet`
+Ejecutar el comando siguiente para generar documentación HTML:
 
-**Required** The name of the person to greet. Default `"World"`.
+```shell
+docker run --rm -it -v="`pwd`":/data z720/archi archi -m /data --script /data/scripts/archi-report-script/generateReports.ajs --html /data/html --pluginDir /data/plugins
+```
 
-## Outputs
+If you have a compiled version of the JArchi script plugin (see [Github project](https://github.com/archimatetool/archi-scripting-plugin) or get a binary version from the [Archi project Patreon page](https://www.patreon.com/architool/posts?filters[tag]=jArchi).)
 
-## `time`
+You can run the script `report.ajs` by placing the `.archiplugin` file in the `plugins` directory with the following command:
 
-The time we greeted you.
+```shell
+docker run --rm -it -v="`pwd`":/data z720/archi archi -m /data --script /data/report.ajs --pluginDir /data/plugins
+```
 
-## Example usage
+## Available options
 
-uses: actions/hello-world-docker-action@v2
-with:
-  who-to-greet: 'Mona the Octocat'
+- `--model | -m <path>` Path to the model local repository or file
+- `--pluginDir <path>` Directory containing the plugins necessary for the command. Any `.archiplugin` file will be installed in the **Archi** instance before running the command. 
+- `--html <path>`: Activate the generation of the HTML report in the provided *path*
+- `--script <filename>` Path to the script to execute. Requires to provide the script plugin.
+- `--help | -h` Display command line help
+
+All the paths should be in a folder exposed via the docker *volume* bindings.
+
+## How to contribute
+
+If you'd like to contribute, start by searching through the issues and pull requests to see whether someone else has raised a similar idea or question.
+
+If you don't see your idea listed, and you think it fits into the goals of this guide, open a pull request.

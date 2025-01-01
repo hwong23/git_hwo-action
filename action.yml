@@ -1,9 +1,9 @@
 # action.yml
-name: 'Hello World'
-description: 'Archi CI'
+name: 'Archi CI'
+description: 'Run jArchi script in a CI pipeline'
 inputs:
   archi-args:  # id of input
-    description: 'Archi input argumentes'
+    description: 'Archi input argumentos'
     required: true
     default: ''
 outputs:
@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.arg1 }}
