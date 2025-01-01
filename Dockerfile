@@ -5,7 +5,6 @@ ENV COARCHI_VERSION=0.9.2
 
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends dbus-x11 at-spi2-core \
-	# libgtk3.0-cil \
 	libswt-gtk-4-jni \
 	xvfb wget openssh-client rsync ca-certificates tar xzip gzip bzip2 zip unzip && \
 		rm -rf /var/lib/apt/lists && \
@@ -21,7 +20,7 @@ RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "
 # Install CoArchi plugin 
 RUN wget "https://www.archimatetool.com/downloads/coarchi/coArchi_${COARCHI_VERSION}.archiplugin" && \
     unzip "coArchi_${COARCHI_VERSION}.archiplugin" -d /root/.archi4/dropins && \
-		rm "coArchi_${COARCHI_VERSION}.archiplugin" /root/.archi4/dropins/archi-plugin
+	rm "coArchi_${COARCHI_VERSION}.archiplugin" /root/.archi4/dropins/archi-plugin
 
 # User space by default
 VOLUME [ /data ]		
@@ -30,8 +29,8 @@ VOLUME [ /data ]
 COPY entrypoint.sh /entrypoint.sh
 COPY archi-wrapper.sh /opt/Archi/archi-wrapper.sh
 RUN chmod +x /entrypoint.sh && \
-		chmod +x /opt/Archi/archi-wrapper.sh && \
-		ln -s /opt/Archi/archi-wrapper.sh /usr/local/bin/archi
+	chmod +x /opt/Archi/archi-wrapper.sh && \
+	ln -s /opt/Archi/archi-wrapper.sh /usr/local/bin/archi
 
 # ARG UID=1000
 # RUN set -eux; \
