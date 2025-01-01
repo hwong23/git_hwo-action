@@ -1,5 +1,4 @@
 #! /bin/bash
-
 echo "Working dir: `pwd`"
 echo "Starting Archi CLI with $@"
 
