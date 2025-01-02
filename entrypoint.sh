@@ -1,3 +1,5 @@
+#!/bin/sh -l
+
 # Setup display
 Xvfb :99 &
 export DISPLAY=:99

@@ -45,6 +45,6 @@ RUN chmod +x /entrypoint.sh && \
 
 WORKDIR /data
 
-# ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "archi", "--help" ]
 
