@@ -1,4 +1,4 @@
-# Docker Image para ejecución JArchi (archimate) en un contenedor
+# Docker Image para ejecución jArchi (archimate) en un contenedor
 
 Esta imagen implementa el caso de uso de generación de contenidos desde un modelo mediante una cadena de CI/CD. Usa [Archi](https://www.archimatetool.com).
 
@@ -10,7 +10,7 @@ Ejecutar el comando siguiente para generar documentación HTML:
 docker run --rm -it -v="`pwd`":/data z720/archi archi -m /data --script /data/scripts/archi-report-script/generateReports.ajs --html /data/html --pluginDir /data/plugins
 ```
 
-If you have a compiled version of the JArchi script plugin (see [Github project](https://github.com/archimatetool/archi-scripting-plugin) or get a binary version from the [Archi project Patreon page](https://www.patreon.com/architool/posts?filters[tag]=jArchi).)
+Debe contar con una versión compilada de la extensión jArchi script plugin (see [Github project](https://github.com/archimatetool/archi-scripting-plugin). Puede obtener una versión en binario desde [Archi project Patreon page](https://www.patreon.com/architool/posts?filters[tag]=jArchi).)
 
 You can run the script `report.ajs` by placing the `.archiplugin` file in the `plugins` directory with the following command:
 
