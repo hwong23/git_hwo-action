@@ -81,10 +81,7 @@ done
 echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS
 
 # Setup display
-Xvfb :99 &
-export DISPLAY=:99
 /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS &&
 printf '\n%s\n\n' "Done. Reports saved."
 
-# pkill -f 'Xvfb :99'
 
