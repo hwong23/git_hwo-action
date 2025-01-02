@@ -1,5 +1,3 @@
-#!/bin/sh -l
-
 exec $@
 
 echo "Hello $1"
