@@ -82,7 +82,5 @@ echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog
 
 # Setup display
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
-pwd && ls . &&
+make -h && 
 printf '\n%s\n\n' "Done. Reports saved."
-
-
