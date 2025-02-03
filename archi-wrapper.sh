@@ -82,5 +82,5 @@ echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog
 
 # Setup display
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
-make help --makefile=./jarchi-hwo/scr/sh/Makefile --directory=./jarchi-hwo/scr/sh && 
+make help --makefile=./jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh && 
 printf '\n%s\n\n' "Done. Reports saved."
