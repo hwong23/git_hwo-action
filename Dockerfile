@@ -6,7 +6,7 @@ ENV COARCHI_VERSION=0.9.2
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends dbus-x11 at-spi2-core \
 	libswt-gtk-4-jni \
-	xvfb wget openssh-client rsync ca-certificates tar xzip gzip bzip2 zip unzip && \
+	xvfb wget openssh-client rsync ca-certificates tar xzip gzip bzip2 zip unzip make && \
 		rm -rf /var/lib/apt/lists && \
 		mkdir -p /usr/share/desktop-directories 
 
