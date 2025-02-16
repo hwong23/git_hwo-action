@@ -6,6 +6,7 @@ echo "Starting Archi CLI with $@"
 PARAMS=""
 ARGS=""
 PLUGINDIR=""
+ALIAS="none"
 
 while (( "$#" )); do
   case "$1" in
@@ -54,6 +55,11 @@ while (( "$#" )); do
         exit 1
       fi
       ;;
+    --alias)
+      echo "devdoc $2"
+      ALIAS=$2
+      shift 2
+    ;;
 		--html)
       echo "Try to generate HTML reports in $2"
       if [ -n "$2" ] && [ ${2:0:1} != "-" ]; then
@@ -82,5 +88,6 @@ echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog
 
 # Setup display
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
-make documento alias=triipropuesta --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh && 
-printf '\n%s\n\n' "Done. Reports saved."
+make documento alias=$ALIAS \
+   --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh \
+   && printf '\n%s\n\n' "Done. Reports saved."
