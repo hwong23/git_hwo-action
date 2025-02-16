@@ -46,9 +46,9 @@ while (( "$#" )); do
       ;;
     --alias)
       echo "Devdoc alias $2"
-      ALIAS=$2
+      ALIAS="$2"
       shift 2
-    ;;
+      ;;
 		--script)
       echo "Try to execute script $2"
       if [ -z "$PLUGINDIR" ]; then echo "WARNING: --pluginDir not provided: Script might not execute at all..."; fi
