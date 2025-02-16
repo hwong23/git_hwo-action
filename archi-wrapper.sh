@@ -44,6 +44,11 @@ while (( "$#" )); do
         exit 1
       fi
       ;;
+    --alias)
+      echo "Devdoc alias $2"
+      ALIAS=$2
+      shift 2
+    ;;
 		--script)
       echo "Try to execute script $2"
       if [ -z "$PLUGINDIR" ]; then echo "WARNING: --pluginDir not provided: Script might not execute at all..."; fi
@@ -55,11 +60,6 @@ while (( "$#" )); do
         exit 1
       fi
       ;;
-    --alias)
-      echo "devdoc $2"
-      ALIAS=$2
-      shift 2
-    ;;
 		--html)
       echo "Try to generate HTML reports in $2"
       if [ -n "$2" ] && [ ${2:0:1} != "-" ]; then
