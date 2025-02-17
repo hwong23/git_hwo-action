@@ -80,7 +80,6 @@ done
 # Run Archi in the command line
 echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS
 
-# Setup display
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
 make documento alias=triipropuesta --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh && 
 printf '\n%s\n\n' "Done. Reports saved."
