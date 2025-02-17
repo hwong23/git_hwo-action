@@ -6,6 +6,7 @@ echo "Starting Archi CLI with $@"
 PARAMS=""
 ARGS=""
 PLUGINDIR=""
+ALIAS="none"
 
 while (( "$#" )); do
   case "$1" in
@@ -42,6 +43,11 @@ while (( "$#" )); do
         echo "Error: Argument for $1 is missing" >&2
         exit 1
       fi
+      ;;
+    --alias)
+      echo "Devdoc alias $2"
+      ALIAS="$2"
+      shift 2
       ;;
 		--script)
       echo "Try to execute script $2"
@@ -81,5 +87,6 @@ done
 echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS
 
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
-make documento alias=triipropuesta --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh && 
-printf '\n%s\n\n' "Done. Reports saved."
+make documento alias=$ALIAS \
+   --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh \
+   && printf '\n%s\n\n' "Done. Reports saved."
