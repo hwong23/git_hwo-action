@@ -1,6 +1,6 @@
 #! /bin/bash
-echo "Working dir: `pwd`"
-echo "Starting Archi CLI with $@"
+echo "(archiwrapper) Working dir: `pwd`"
+echo "(archiwrapper) Starting Archi CLI with $@"
 
 # Parse Arguments 
 PARAMS=""
