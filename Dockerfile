@@ -18,9 +18,9 @@ RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "
 		mkdir -p /root/.archi4/dropins
 
 # Install CoArchi plugin 
-RUN wget "https://www.archimatetool.com/downloads/coarchi/coArchi_${COARCHI_VERSION}.archiplugin" && \
-    unzip "coArchi_${COARCHI_VERSION}.archiplugin" -d /root/.archi4/dropins && \
-	rm "coArchi_${COARCHI_VERSION}.archiplugin" /root/.archi4/dropins/archi-plugin
+# RUN wget "https://www.archimatetool.com/downloads/coarchi/coArchi_${COARCHI_VERSION}.archiplugin" && \
+#     unzip "coArchi_${COARCHI_VERSION}.archiplugin" -d /root/.archi4/dropins && \
+# 	rm "coArchi_${COARCHI_VERSION}.archiplugin" /root/.archi4/dropins/archi-plugin
 
 # User space by default
 VOLUME [ /data ]		
