@@ -30,7 +30,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY archi-wrapper.sh /opt/Archi/archi-wrapper.sh
 RUN chmod +x /entrypoint.sh && \
 	chmod +x /opt/Archi/archi-wrapper.sh && \
-	ln -s /opt/Archi/archi-wrapper.sh /usr/local/bin/archi
+	ln -s /opt/Archi/archi-wrapper.sh /usr/local/bin/archiapp
 
 # ARG UID=1000
 # RUN set -eux; \
