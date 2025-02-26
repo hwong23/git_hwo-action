@@ -80,6 +80,8 @@ done
 # Run Archi in the command line
 echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS
 
+ls -l /tmp/jarchi-hwo/scr/sh
+
 # /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS 
 make documento --makefile=/tmp/jarchi-hwo/scr/sh/makefile --directory=/tmp/jarchi-hwo/scr/sh \
    && printf '\n%s\n\n' "Done. Reports saved."
