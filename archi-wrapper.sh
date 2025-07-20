@@ -5,6 +5,7 @@ echo "(archiwrapper) Starting Archi CLI with $@"
 # Parse Arguments 
 PARAMS=""
 ARGS=""
+ARGSMAKE=""
 PLUGINDIR=""
 
 while (( "$#" )); do
@@ -58,6 +59,7 @@ while (( "$#" )); do
       echo "Try to generate HTML reports in $2"
       if [ -n "$2" ] && [ ${2:0:1} != "-" ]; then
         ARGS="$ARGS --html.createReport $2"
+        ARGSMAKE="$ARGSMAKE reporte"
         shift 2
       else
         echo "Error: Argument for $1 is missing" >&2
@@ -79,5 +81,5 @@ done
  
 # Run Archi in the command line
 echo /opt/Archi/Archi -application com.archimatetool.commandline.app -consoleLog -nosplash $ARGS
-make documento --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh \
+make documento $ARGSMAKE --makefile=/github/workspace/jarchi-hwo/scr/sh/makefile --directory=./jarchi-hwo/scr/sh \
    && printf '\n%s\n\n' "Done. Reports saved."
