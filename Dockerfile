@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ENV ARCHI_VERSION=4.9.3
+ENV ARCHI_VERSION=5.3.0
 ENV COARCHI_VERSION=0.9.2
 
 RUN apt-get update -y && \
