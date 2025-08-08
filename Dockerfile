@@ -15,9 +15,10 @@ RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "
 		tar zxvf "Archi-Linux64-${ARCHI_VERSION}.tgz" -C /opt/ && \
 		rm "Archi-Linux64-${ARCHI_VERSION}.tgz" && \
 		chmod +x /opt/Archi/Archi && \
-		# archi 4.9 mkdir -p /root/.archi4/dropins
+		mkdir -p /root/.archi/dropins && \
+		mkdir -p /root/Documents/Archi/scripts
 		# archi 5.3
-		mkdir -p /root/.archi/dropins
+		# archi 4.9 mkdir -p /root/.archi4/dropins
 
 # Install CoArchi plugin 
 # RUN wget "https://www.archimatetool.com/downloads/coarchi/coArchi_${COARCHI_VERSION}.archiplugin" && \
