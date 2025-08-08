@@ -39,7 +39,7 @@ while (( "$#" )); do
           echo "Try to activate plugin $z"; 
           # archi 4.9 unzip -o "$z" -d /root/.archi4/dropins
           # archi 5.3
-          unzip -o "$z" -d /opt/Archi/plugins
+          unzip -o "$z" -d /root/.archi/dropins
         done
       else
         echo "Error: Argument for $1 is missing" >&2
