@@ -37,7 +37,9 @@ while (( "$#" )); do
         ls -l $PLUGINDIR/*.archiplugin
         for z in "$PLUGINDIR/*.archiplugin"; do 
           echo "Try to activate plugin $z"; 
-          unzip -o "$z" -d /root/.archi4/dropins
+          # archi 4.9 unzip -o "$z" -d /root/.archi4/dropins
+          # archi 5.3
+          unzip -o "$z" -d /opt/Archi/plugins
         done
       else
         echo "Error: Argument for $1 is missing" >&2
