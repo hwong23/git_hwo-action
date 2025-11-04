@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ENV ARCHI_VERSION=5.3.0
+ENV ARCHI_VERSION=5.7.0
 ENV COARCHI_VERSION=0.9.2
 
 RUN apt-get update -y && \
@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 		mkdir -p /usr/share/desktop-directories 
 
 # Install Archi https://www.archimatetool.com/downloads/archi/
-RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "https://www.archimatetool.com/downloads/archi/archive/${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" && \
+RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "https://github.com/archimatetool/archi.io/releases/download/57/Archi-Linux64-5.7.0.tgz" && \
 		tar zxvf "Archi-Linux64-${ARCHI_VERSION}.tgz" -C /opt/ && \
 		rm "Archi-Linux64-${ARCHI_VERSION}.tgz" && \
 		chmod +x /opt/Archi/Archi && \
