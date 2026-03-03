@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 		mkdir -p /usr/share/desktop-directories 
 
 # Install Archi https://www.archimatetool.com/downloads/archi/
-RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "https://github.com/archimatetool/archi.io/releases/download/57/Archi-Linux64-5.7.0.tgz" && \
+RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "https://github.com/archimatetool/archi.io/releases/download/5.7.0/Archi-Linux64-5.7.0.tgz" && \
 		tar zxvf "Archi-Linux64-${ARCHI_VERSION}.tgz" -C /opt/ && \
 		rm "Archi-Linux64-${ARCHI_VERSION}.tgz" && \
 		chmod +x /opt/Archi/Archi && \
@@ -19,7 +19,7 @@ RUN  wget --post-data="dl=${ARCHI_VERSION}/Archi-Linux64-${ARCHI_VERSION}.tgz" "
 		mkdir -p /root/Documents/Archi/scripts
 		# archi 5.3
 		# archi 4.9 mkdir -p /root/.archi4/dropins
-
+		
 # Install CoArchi plugin 
 # RUN wget "https://www.archimatetool.com/downloads/coarchi/coArchi_${COARCHI_VERSION}.archiplugin" && \
 #     unzip "coArchi_${COARCHI_VERSION}.archiplugin" -d /root/.archi4/dropins && \
